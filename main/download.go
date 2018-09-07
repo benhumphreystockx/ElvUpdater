@@ -13,7 +13,7 @@ var wowPath = "C:/Program Files (x86)/World of Warcraft/Interface/AddOns/"
 func downloadFileAndExtract(file string, url string) {
 	fmt.Println("Downloading: " + addons[file])
 	//create file
-	w, err := os.Create(addons[file] + ".zip")
+	w, err := os.Create(wowPath + addons[file] + ".zip")
 	checkErr(err)
 
 	defer w.Close()
