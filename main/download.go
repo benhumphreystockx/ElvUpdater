@@ -8,6 +8,8 @@ import (
 	"os"
 )
 
+var wowPath = "C:/Program Files (x86)/World of Warcraft/Interface/AddOns/"
+
 func downloadFileAndExtract(file string, url string) {
 	fmt.Println("Downloading: " + addons[file])
 	//create file
@@ -24,7 +26,9 @@ func downloadFileAndExtract(file string, url string) {
 	_, err = io.Copy(w, resp.Body)
 	checkErr(err)
 
-	err = archiver.Zip.Open(addons[file] + ".zip", wowPath)
+	fmt.Println(addons[file] + ".zip")
+	fmt.Println(wowPath)
+	err = archiver.Zip.Open(addons[file]+".zip", wowPath)
 	checkErr(err)
 }
 

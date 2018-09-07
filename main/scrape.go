@@ -12,7 +12,6 @@ import (
 
 var baseUrl = "https://www.tukui.org/addons.php"
 var addons map[string]string
-var wowPath = "C:/Program Files (x86)/World of Warcraft/Interface/AddOns/"
 
 func parseLinks(body *io.ReadCloser, req string, sep string) map[string]string {
 	var links map[string]string
@@ -33,7 +32,7 @@ func parseLinks(body *io.ReadCloser, req string, sep string) map[string]string {
 						//dynamic selector
 						if strings.Contains(attr.Val, req) {
 							//dynamic separator
-							id := strings.Split(attr.Val,sep)[1]
+							id := strings.Split(attr.Val, sep)[1]
 
 							//go to the next token (should be the a tag text
 							t.Next()
