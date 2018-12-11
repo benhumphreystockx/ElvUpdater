@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-var wowPath = "C:/Program Files (x86)/World of Warcraft/Interface/AddOns/"
+var wowPath = "C:/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns/"
 
 func downloadFileAndExtract(file string, url string) {
 	fmt.Println("Downloading: " + addons[file])
